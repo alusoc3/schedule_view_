@@ -1,0 +1,195 @@
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 30px; /* パディングを拡大 */
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: #fff;
+  padding: 35px; /* 内側の余白を拡大 */
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 900px; /* 最大幅を650pxから900pxに拡大 */
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 28px; /* 文字サイズ拡大 */
+}
+
+/* 絞り込みフィルター */
+.filter-section {
+  background: #f8fafc;
+  padding: 20px; /* パディング拡大 */
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 30px;
+}
+
+.filter-title {
+  font-size: 16px; /* 文字サイズ拡大 */
+  font-weight: bold;
+  color: #475569;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-hint {
+  font-size: 13px; /* 文字サイズ拡大 */
+  font-weight: normal;
+  color: #64748b;
+}
+
+.teacher-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* タブ間の隙間を拡大 */
+}
+
+.teacher-btn {
+  padding: 10px 18px; /* ボタンのサイズ拡大 */
+  border: 1px solid #cbd5e1;
+  border-radius: 24px;
+  background: #fff;
+  color: #334155;
+  font-size: 15px; /* 文字サイズ拡大 */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.teacher-btn.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(59, 130, 246, 0.3);
+}
+
+.teacher-btn.all-btn.active {
+  background: #1e293b;
+  border-color: #1e293b;
+}
+
+/* リスト表示 */
+.section-title {
+  font-size: 18px; /* 文字サイズ拡大 */
+  font-weight: bold;
+  color: #334155;
+  margin: 20px 0 14px 0;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #e2e8f0;
+}
+
+.section-title.past-title {
+  margin-top: 40px;
+  color: #64748b;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #fff;
+  padding: 16px 20px; /* リスト項目の内側余白拡大 */
+  border: 1px solid #e2e8f0;
+  border-left: 6px solid #3b82f6; /* 線を少し太く */
+  border-radius: 10px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+/* 過去の予定スタイル */
+li.past-task {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  opacity: 0.65;
+}
+
+/* 種別ごとの線色 */
+li.type-会議 { border-left-color: #ef4444; }
+li.type-行事 { border-left-color: #f59e0b; }
+li.type-部活 { border-left-color: #10b981; }
+li.type-その他 { border-left-color: #6b7280; }
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-header {
+  display: flex;
+  flex-direction: column; /* 縦並びにして改行 */
+  align-items: flex-start; /* 左寄せ */
+  gap: 10px; /* バッジとタイトルの間隔（少し空ける） */
+}
+
+/* バッジを横並びにするためのスタイルを追加 */
+.badge-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.teacher-badge {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 4px 12px; /* バッジ拡大 */
+  border-radius: 16px;
+  font-size: 14px; /* 文字サイズ拡大 */
+  font-weight: bold;
+}
+
+.type-badge {
+  font-size: 13px; /* 文字サイズ拡大 */
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.task-title {
+  font-size: 18px; /* 予定の件名を大きく */
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.task-meta {
+  font-size: 20px; /* 日時情報を大きく */
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.past-badge {
+  font-size: 12px;
+  background: #94a3b8;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: normal;
+}
+
+.empty-msg {
+  color: #94a3b8;
+  font-size: 16px; /* メッセージを大きく */
+  text-align: center;
+  padding: 30px 0;
+}

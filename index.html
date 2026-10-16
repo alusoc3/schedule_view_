@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>先生の放課後スケジュール・行事一覧（閲覧専用）</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>先生の放課後スケジュール・行事一覧</h1>
+
+  <!-- 絞り込みフィルター（複数選択対応） -->
+  <div class="filter-section">
+    <div class="filter-title">
+      <span>絞り込み（先生を選択）</span>
+      <span class="filter-hint">※複数タップで組み合わせ選択</span>
+    </div>
+    <div class="teacher-tabs" id="teacherTabs">
+      <button class="teacher-btn all-btn active" onclick="selectTeacher('全員')">全員</button>
+      <button class="teacher-btn" onclick="selectTeacher('小松先生')">小松先生</button>
+      <button class="teacher-btn" onclick="selectTeacher('中塚先生')">中塚先生</button>
+      <button class="teacher-btn" onclick="selectTeacher('塩沢誉先生')">塩沢誉先生</button>
+      <button class="teacher-btn" onclick="selectTeacher('塩澤仁士先生')">塩澤仁士先生</button>
+      <button class="teacher-btn" onclick="selectTeacher('福澤先生')">福澤先生</button>
+      <button class="teacher-btn" onclick="selectTeacher('丸山先生')">丸山先生</button>
+      <button class="teacher-btn" onclick="selectTeacher('清水先生')">清水先生</button>
+    </div>
+  </div>
+
+  <!-- これからの予定 -->
+  <div class="section-title">📅 本日・これからの予定</div>
+  <ul id="upcomingTaskList"></ul>
+
+  <!-- 本日終了した予定 -->
+  <div class="section-title past-title">🕒 本日終了した予定</div>
+  <ul id="pastTaskList"></ul>
+</div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+<!-- JavaScriptファイルの読み込み（index.jsに変更） -->
+<script src="index.js"></script>
+
+</body>
+</html>
